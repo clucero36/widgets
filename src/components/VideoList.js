@@ -1,8 +1,5 @@
 import React from 'react';
 import VideoItem from './VideoItem';
-import {
-    Box,
-  } from '@chakra-ui/react';
 
 const VideoList = ({ videos, onVideoSelect }) => {
     let renderedList = videos.map((video) => {

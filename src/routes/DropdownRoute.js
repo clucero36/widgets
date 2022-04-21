@@ -17,6 +17,9 @@ const DropDownRoute = () => {
                 label='Select a Color'
                 onSelectedChange={setColor}
             />
+            <Box display='none'>
+                {color}
+            </Box>
         </Box>
     )
 }

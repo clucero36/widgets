@@ -1,7 +1,6 @@
 import React from 'react';
 import {
     Select,
-    Text,
     Box,
   } from '@chakra-ui/react'
 
