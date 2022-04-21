@@ -8,6 +8,10 @@ export const overrides = extendTheme({
 
     components: {
         Link,
-    }
+    },
+    config: {
+        initialColorMode: 'dark',
+        useSystemColorMode: false,
+      }
+      
 })
-

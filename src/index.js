@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { overrides } from './themes/themeIndex';
 
 import App from './App';
@@ -16,6 +16,7 @@ import DropDownRoute from './routes/DropdownRoute';
 
 const routing = (
   <ChakraProvider resetCSS theme={overrides}>
+    <ColorModeScript initialColorMode={overrides.config.initialColorMode} />
     <BrowserRouter>
       <Header />
       <Routes >

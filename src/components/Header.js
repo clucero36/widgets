@@ -4,7 +4,7 @@ import { Link, HStack, Box } from '@chakra-ui/react';
 
 const Header = () => {
     return (
-        <Box p='2rem' m='0 auto' boxShadow='2xl' bgColor='gray.800'>
+        <Box p='2rem' m='0 auto' boxShadow='2xl'>
             <HStack justify='space-between' justifyContent='center' spacing='1rem'>
                 <Link variant='primary' to='/' className='item' as={routerLink} >
                     Home

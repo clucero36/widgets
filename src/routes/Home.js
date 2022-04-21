@@ -1,10 +1,12 @@
 import React from 'react';
 import {
+    Button,
     Box,
     Heading,
     Icon,
     HStack,
     Link,
+    useColorMode,
 } from '@chakra-ui/react';
 import { 
     IoIosSearch,
@@ -18,6 +20,7 @@ import { Link as routerLink} from 'react-router-dom';
 
 
 const Home = () => {
+    const { colorMode, toggleColorMode } = useColorMode();
 
     return (
         <Box>
@@ -44,6 +47,9 @@ const Home = () => {
                     <Icon w={8} h={8} as={IoIosVideocam}  _hover={{ color: 'yellow.200'}} />
                 </Link>
             </HStack>
+            <Button onClick={toggleColorMode}>
+                Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+            </Button>
         </Box>
     )
 }
