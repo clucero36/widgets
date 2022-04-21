@@ -1,24 +1,35 @@
-import { ColorModeScript } from '@chakra-ui/react';
-import React, { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import { overrides } from './themes/themeIndex';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import * as serviceWorker from './serviceWorker';
+import Header from './components/Header';
+import Accordion from './routes/Accordion';
+import Translate from './routes/Translate';
+import Search from './routes/Search';
+import VideoPlayer from './routes/VideoPlayer';
+import DropDownRoute from './routes/DropdownRoute';
 
-ReactDOM.render(
-  <StrictMode>
-    <ColorModeScript />
-    <App />
-  </StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://cra.link/PWA
-serviceWorker.unregister();
+const routing = (
+  <ChakraProvider resetCSS theme={overrides}>
+    <BrowserRouter>
+      <Header />
+      <Routes >
+          <Route path='/' element={<App />} />
+          <Route path='search' element={<Search />} />
+          <Route path='translate' element={<Translate />} />
+          <Route path='accordion' element={<Accordion />} />
+          <Route path='videoplayer' element={<VideoPlayer />} />
+          <Route path='dropdown' element={<DropDownRoute />} />
+      </Routes>
+    </BrowserRouter>
+  </ChakraProvider>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
+
+ReactDOM.render(routing, document.querySelector('#root'))
+
