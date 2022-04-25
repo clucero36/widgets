@@ -17,7 +17,7 @@ const SearchBar = ({ onFormSubmit }) => {
     return (
         <Box>
             <Box onSubmit={onSubmit} >
-                <Heading size='md'>Search Bar</Heading>
+                <Heading size='md'>Search</Heading>
                 <Input 
                     size='sm'
                     type='text'

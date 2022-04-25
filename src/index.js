@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { overrides } from './themes/themeIndex';
 

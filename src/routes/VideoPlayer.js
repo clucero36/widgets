@@ -5,6 +5,7 @@ import VideoDetail from '../components/VideoDetail';
 import useVideos from '../hooks/useVideos';
 import {
     Box,
+    Heading
   } from '@chakra-ui/react';
 
 const VideoPlayer = () => {
@@ -18,16 +19,23 @@ const VideoPlayer = () => {
     return (
         <Box w='80%' m='2rem auto'>
             <SearchBar onFormSubmit={search} />
-            <Box display='flex' flexDir='row' justifyContent='space-between' mt='4rem'>
-                <div >
+            <Heading mt='2rem'>VideoPlayer</Heading>
+            <Box 
+                display={['block', 'block', 'block', 'flex', 'flex']} 
+                flexDir='row' 
+                justifyContent='space-between' 
+                mt='3rem'
+                gap='1rem'
+            >
+                <Box>
                     <VideoDetail video={selectedVideo} />
-                </div>
-                <div>
+                </Box>
+                <Box mt={['2rem', '2rem', '2rem', '0', '0']}>
                     <VideoList 
                         onVideoSelect={setSelectedVideo} 
                         videos={videos} 
                     />
-                </div>
+                </Box>
             </Box>
         </Box>
     )
