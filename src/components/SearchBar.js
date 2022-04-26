@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import {
     Box,
-    Heading,
-    Input
-  } from '@chakra-ui/react'
+    Input,
+    Icon,
+    InputRightElement,
+    InputGroup,
+    FormLabel,
+} from '@chakra-ui/react'
+import { 
+    IoIosSearch,
+} from "react-icons/io";
+
+
 
 const SearchBar = ({ onFormSubmit }) => {
     const [term, setTerm] = useState('')
@@ -16,18 +24,20 @@ const SearchBar = ({ onFormSubmit }) => {
 
     return (
         <Box>
-            <Box onSubmit={onSubmit} >
-                <Heading size='md'>Search</Heading>
-                <Input 
-                    focusBorderColor='teal.200'
-                    size='sm'
-                    type='text'
-                    value={term}
-                    onChange={(e) => setTerm(e.target.value)}
-                />
-            </Box>
+            <form onSubmit={onSubmit}>
+                <FormLabel size='md'>Search</FormLabel>
+                <InputGroup>
+                    <Input 
+                        focusBorderColor='teal.200'
+                        size='sm'
+                        type='text'
+                        value={term}
+                        onChange={(e) => setTerm(e.target.value)}
+                    />
+                    <InputRightElement onClick={onSubmit} children={<Icon as={IoIosSearch} />} />
+                </InputGroup>
+            </form>
         </Box>
-
     )
 }
 
