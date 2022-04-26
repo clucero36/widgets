@@ -58,7 +58,7 @@ const Search = () => {
                         <span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>
                     </Box>
                     <Button>
-                        <a href={`https://en.wikipedia.org?curid=${result.pageid}`} className='ui button'>Go</a>
+                        <a href={`https://en.wikipedia.org?curid=${result.pageid}`} >Go</a>
                     </Button>
                 </Flex>
             </Box>

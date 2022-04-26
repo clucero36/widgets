@@ -7,6 +7,7 @@ import {
     AccordionPanel,
     AccordionIcon,
     Box,
+    Heading,
   } from '@chakra-ui/react'
 
 const AccordionComp = () => {
@@ -16,16 +17,16 @@ const AccordionComp = () => {
     const renderedItems = items.map((item) => {
         return (
             <React.Fragment key={item.title} >
-                <AccordionItem bgColor='gray.800'> 
-                    <h2>
-                        <AccordionButton>
-                            <Box flex='1' textAlign='left'>
+                <AccordionItem > 
+                    <Heading>
+                        <AccordionButton focusBorderColor='teal.200'>
+                            <Box flex='1' textAlign='left' >
                                 {item.title}
                             </Box>
                             <AccordionIcon />
                         </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb='4' bgColor='teal.900'>
+                    </Heading>
+                    <AccordionPanel pb='4'>
                         {item.content}
                     </AccordionPanel>
                 </AccordionItem>

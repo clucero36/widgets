@@ -19,6 +19,7 @@ const SearchBar = ({ onFormSubmit }) => {
             <Box onSubmit={onSubmit} >
                 <Heading size='md'>Search</Heading>
                 <Input 
+                    focusBorderColor='teal.200'
                     size='sm'
                     type='text'
                     value={term}

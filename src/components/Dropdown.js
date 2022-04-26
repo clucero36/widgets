@@ -11,7 +11,6 @@ const Dropdown = ({ selections, label, onSelectedChange }) => {
                 <option 
                     key={selection.value} 
                     value={selection.value} 
-                    style={{ backgroundColor: '#1D4044' }} 
                 >
                     {selection.label}
                 </option>
@@ -19,7 +18,7 @@ const Dropdown = ({ selections, label, onSelectedChange }) => {
     })
 
     return (
-        <Box boxShadow='2xl'>
+        <Box>
             <label>{label}</label>
             <Select 
                 variant='flushed' 
