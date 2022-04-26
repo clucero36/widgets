@@ -14,7 +14,7 @@ const VideoDetail = ({ video }) => {
     return (
         <>
             <AspectRatio ratio={2}>
-                <iframe src={videoSrc} title='video player'/>
+                <iframe minW='740px' src={videoSrc} title='video player'/>
             </AspectRatio>
             <div className='ui segment'>
                 <h1 className='ui header'>{video.snippet.title}</h1>

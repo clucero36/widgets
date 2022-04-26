@@ -12,10 +12,11 @@ const VideoItem = ({ video, onVideoSelect }) => {
             alignItems='center'
             mb='.5rem'
             borderColor='pink'
+            mr='0'
         >
             <img 
                 alt={video.snippet.title}
-                style={{ marginRight: '10px'}} 
+                style={{ marginRight: '10px', maxHeight: '5rem'}} 
                 src={video.snippet.thumbnails.medium.url}
             />
             <div>{video.snippet.title}</div>

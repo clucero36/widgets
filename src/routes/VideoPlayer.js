@@ -27,7 +27,7 @@ const VideoPlayer = () => {
                 mt='3rem'
                 gap='1rem'
             >
-                <Box>
+                <Box w='100%'>
                     <VideoDetail video={selectedVideo} />
                 </Box>
                 <Box mt={['2rem', '2rem', '2rem', '0', '0']}>
