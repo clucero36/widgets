@@ -13,8 +13,8 @@ const VideoDetail = ({ video }) => {
     
     return (
         <>
-            <AspectRatio maxW='750px' ratio={2}>
-                <iframe src={videoSrc} title='video player' style={{ width: '100%', height: '100%'}}/>
+            <AspectRatio ratio={2}>
+                <iframe src={videoSrc} title='video player'/>
             </AspectRatio>
             <div className='ui segment'>
                 <h1 className='ui header'>{video.snippet.title}</h1>
